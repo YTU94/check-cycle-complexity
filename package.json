@@ -1,6 +1,6 @@
 {
   "name": "check-cycle-complexity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "check code cycle complexity",
   "main": "./bin/index.js",
   "bin": {
