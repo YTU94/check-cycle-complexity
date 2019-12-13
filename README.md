@@ -2,7 +2,7 @@
 
 ### useage
 ```
-snpm i -g check-cycle-complexity
+npm i -g check-cycle-complexity
 
 cd /yourcheckPath
 
