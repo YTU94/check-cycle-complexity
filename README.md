@@ -2,7 +2,7 @@
 
 ### useage
 ```
-snpm i -g @souche/check-cycle-complexity
+snpm i -g check-cycle-complexity
 
 cd /yourcheckPath
 
