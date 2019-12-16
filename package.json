@@ -1,15 +1,17 @@
 {
   "name": "check-cycle-complexity",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "check code cycle complexity",
   "main": "./bin/index.js",
   "bin": {
     "concc": "./bin/index.js"
   },
   "dependencies": {
+    "chalk": "^3.0.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.0.1",
     "glob": "^7.1.6",
+    "table": "^5.4.6",
     "yargs": "^15.0.2"
   },
   "devDependencies": {},

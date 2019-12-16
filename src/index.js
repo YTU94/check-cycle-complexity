@@ -146,8 +146,7 @@ function executeOnFiles(paths, min) {
     const normalRatio = +(normalCount / funcCount)
     const slightRatio = +(slightCount / funcCount)
     const seriousRatio = +(seriousCount / funcCount)
-    const score = (normalCount / funcCount + (slightCount / funcCount) * 0.5 + (seriousCount / funcCount) * (5 / 3)).toFixed(4) * 100
-    return { normalRatio, slightRatio, seriousRatio, fileCount, funcCount, result, score }
+    return { normalRatio, slightRatio, seriousRatio, fileCount, funcCount, result }
 }
 
 /**
@@ -156,7 +155,7 @@ function executeOnFiles(paths, min) {
 function getFiles() {
     return new Promise(resolve => {
         glob(
-            "**/*.?(vue|js|jsx|ts|tsx)",
+            "**/*.?(vue|js|jsx)",
             {
                 ignore: DEFAULT_IGNORE_PATTERNS
             },
