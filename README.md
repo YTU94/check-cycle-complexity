@@ -16,16 +16,18 @@ concc version //显示concc版本
 #### sr
 > 默认统计当前cmd目录
 ```
+// 默认统计 圈复杂度>1
 concc sr
-// --min=? 过滤圈复杂度
+// --min 过滤圈复杂度
+concc sr --min=10 
 ```
 ### 结果展示
 
-![markdown](./static/imgs/Snipaste_2019-12-16_13-59-46.png)
+![markdown](http://assets.ytuj.cn/img/Snipaste_2019-12-16_13-59-46.png)
 
 ------------
 
-![avatar](./static/imgs/Snipaste_2019-12-16_14-00-01.png)
+![avatar](http://assets.ytuj.cn/img/Snipaste_2019-12-16_14-00-01.png)
 
 
 
