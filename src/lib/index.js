@@ -1,9 +1,23 @@
 const cc = require("../index")
 const chalk = require("chalk")
 const { table } = require("table")
+const { Spinner } = require("cli-spinner")
 
 const M_TABLE_HEAD = ["类目", "数据"]
 const TABLE_HEAD = ["函数名", "函数类型", "复杂度", "文件名", "位置", "重构建议"]
+
+let spinner = new Spinner("")
+
+const loading = (title = "加载中...") => {
+    spinner.setSpinnerTitle(` 💫  ${title}  %s`)
+    spinner.setSpinnerString("⣾⣽⣻⢿⡿⣟⣯⣷")
+    spinner.start()
+}
+
+const stop = () => {
+    spinner.stop()
+    console.log()
+}
 
 function fmtNumber(v) {
     let n = parseFloat(v)
@@ -15,7 +29,13 @@ function fmtNumber(v) {
 }
 
 module.exports = async function(param) {
+    loading("正在执行代码复杂度检测...")
+
+    const start = Date.now()
+
     const ccResult = await cc(param)
+    stop()
+    console.log(`检测完成,耗费${Date.now() - start}ms`)
     const { normalRatio, slightRatio, seriousRatio, fileCount, funcCount, result, score } = ccResult
 
     let mResultTable = [

@@ -17,3 +17,5 @@ module.exports = function() {
 
     yargs.argv
 }
+
+cc()
